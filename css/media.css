@@ -2,13 +2,80 @@
 @media (min-width: 576px) {}
 
 /*? md */
-@media (min-width: 768px) {}
+@media (min-width: 768px) {
+  .fs-md-36 {
+    font-size: 2.25rem;
+  }
+
+    .carousel-container {
+      padding-inline: 80px;
+    }
+}
 
 /*? lg */
-@media (min-width: 992px) {}
+@media (min-width: 992px) {
+
+  .me-lg-32 {
+    margin-inline-end: 32px;
+  }
+
+  .fs-lg-48 {
+    font-size: 3rem;
+  }
+
+  .fs-lg-60 {
+    font-size: 3.75rem;
+  }
+
+
+
+
+  .navbar {
+
+
+    .navbar-collapse {
+      border: none !important;
+    }
+
+    .nav-item {
+      .nav-link {
+        position: relative;
+        transition: .3s;
+
+        &:hover {
+          background-color: inherit;
+        }
+
+        &::before {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          height: 2px;
+          width: 0;
+          background-color: #8045EF;
+          transition: .3s;
+        }
+
+        &:hover::before {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+
+  .hero {
+    padding-block: 80px 0;
+  }
+}
 
 /*? xl */
 @media (min-width: 1200px) {}
 
 /*? xxl */
-@media (min-width: 1400px) {}
+@media (min-width: 1400px) {
+  .container {
+    max-width: 96rem;
+  }
+}
