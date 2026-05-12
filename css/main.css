@@ -153,12 +153,20 @@ header {
   margin-bottom: 12px;
 }
 
+.mb-20 {
+  margin-bottom: 20px;
+}
+
 .mx-32 {
   margin-inline: 32px;
 }
 
 .mb-32 {
   margin-bottom: 32px;
+}
+
+.mb-64 {
+  margin-bottom: 64px;
 }
 
 .text-black {
@@ -269,6 +277,131 @@ header {
 
         &::before {
           width: 100%;
+        }
+      }
+    }
+  }
+
+  .dropdown-menu {
+    height: 400px;
+
+    .feat,
+    .types,
+    .locations,
+    .resources {
+      background-color: #f9fafb;
+    }
+
+    .feat {
+
+      .img-wrapper {
+        width: 48px;
+        height: 48px;
+      }
+
+      .villa,
+      .apartment {
+        transition: .2s;
+
+        &:hover {
+          background-color: #F4F3FF !important;
+        }
+
+        p {
+          color: #6a7282;
+        }
+      }
+    }
+
+    .types {
+      ul li a {
+        * {
+          transition: .2s;
+        }
+
+        &:hover {
+          color: #7f22fe;
+        }
+      }
+
+    }
+
+    .locations .row {
+      a>div span:nth-child(2) {
+        color: #ddd6ff;
+      }
+
+      .new-york {
+        background-image: linear-gradient(to right, #4d179a99, #59168b99), url(../imgs/new-york.jpeg);
+        background-size: cover;
+        background-position: center;
+        height: 64px;
+      }
+
+      .los-angeles {
+        background-image: linear-gradient(to right, #4d179a99, #59168b99), url(../imgs/los-angeles.jpeg);
+        background-size: cover;
+        background-position: center;
+        height: 64px;
+      }
+
+      .miami {
+        background-image: linear-gradient(to right, #4d179a99, #59168b99), url(../imgs/miami.jpeg);
+        background-size: cover;
+        background-position: center;
+        height: 64px;
+      }
+    }
+
+    .resources {
+
+      .circle {
+        width: 128px;
+        height: 128px;
+        border-radius: 50%;
+        opacity: .5;
+        top: -60%;
+        right: -25%;
+        background-color: #ede9fe;
+      }
+
+      .icon {
+        width: 32px;
+        height: 32px;
+      }
+
+      .guide>div {
+        border: 1px solid #ede9fe;
+        transition: .2s;
+
+        &:hover {
+          border-color: #ddd6ff;
+        }
+      }
+
+      .tips>div {
+        border: 1px solid #dcfce7;
+        transition: .2s;
+
+        &:hover {
+          border-color: #b9f8cf;
+        }
+
+        .circle {
+          background-color: #EDFDF2;
+        }
+      }
+
+      .reports>div {
+        border: 1px solid oklch(94.6% .033 307.174);
+        transition: .2s;
+
+        &:hover {
+          border-color: #e9d4ff;
+        }
+
+        .circle {
+          background-color: #F9F3FE;
         }
       }
     }
@@ -620,20 +753,314 @@ header {
       transform: translateY(-50%);
     }
 
-        .carousel-control-next {
-          right: -60px;
-        }
+    .carousel-control-next {
+      right: -60px;
+    }
 
-        .carousel-control-prev {
-          left: -60px;
-        }
+    .carousel-control-prev {
+      left: -60px;
+    }
 
-        .carousel-indicators {
-          margin-top: 32px;
-          button {
-            width: 12px;
-            height: 12px;
+    .carousel-indicators {
+      margin-top: 32px;
+
+      button {
+        width: 12px;
+        height: 12px;
+      }
+    }
+  }
+}
+
+/* ? faq section */
+.faq {
+  padding-block: 80px;
+  background-color: #F9FAFB;
+
+  header {
+    h2 {
+      background-image: linear-gradient(to right, #7f22fe 0%, #7008e7 50%, #9810fa 100%);
+    }
+  }
+
+  .accordion {
+    max-width: 56rem;
+
+    .accordion-item {
+      box-shadow: 0 10px 15px -3px #0000001a,
+        0 4px 6px -4px #0000001a;
+
+      .accordion-button:not(.collapsed) {
+        background-color: #fff;
+        box-shadow: none;
+        border-bottom-left-radius: 0px !important;
+        border-bottom-right-radius: 0px !important;
+      }
+
+      .accordion-button:hover {
+        background-color: #F9FAFB;
+      }
+
+      .accordion-button:focus {
+        box-shadow: none;
+      }
+    }
+  }
+}
+
+/* ? contact section */
+.contact {
+  --text-label: #364153;
+  padding-block: 96px;
+  overflow: hidden;
+
+  .circle-top,
+  .circle-bottom {
+    width: calc(var(--spacing)*96);
+    height: calc(var(--spacing)*96);
+    background-color: #f3e8ff;
+    border-radius: 50%;
+    opacity: .5;
+  }
+
+  .circle-top {
+    right: calc(var(--spacing)*-40);
+    top: calc(var(--spacing)*-40);
+  }
+
+  .circle-bottom {
+    left: calc(var(--spacing)*-40);
+    bottom: calc(var(--spacing)*-40);
+  }
+
+  .ring-top,
+  .ring-bottom {
+    border: 4px solid #ddd6ff;
+    border-radius: 50%;
+    width: calc(var(--spacing)*32);
+    height: calc(var(--spacing)*32);
+  }
+
+  .ring-top {
+    right: calc(var(--spacing)*20);
+    top: calc(var(--spacing)*20);
+  }
+
+  .ring-bottom {
+    left: calc(var(--spacing)*20);
+    bottom: calc(var(--spacing)*20);
+  }
+
+  .content {
+    max-width: 80rem;
+
+    >.row:first-child {
+      .icon {
+        width: 64px;
+        height: 64px;
+        background-image: linear-gradient(to right bottom, #8e51ff 0%, #7f22fe 100%);
+        transition: .3s;
+      }
+
+      .phone,
+      .email,
+      .location,
+      .chat {
+
+        >div {
+
+          transition: .3s;
+
+          &:hover {
+            border-color: #c4b4ff !important;
+            transform: translateY(-8px);
+          }
+
+          &:hover .icon {
+            scale: 1.1;
+          }
+
+          a {
+            color: #7008e7;
           }
         }
+      }
+
+      .email>div {
+
+        &:hover {
+          border-color: #dab2ff !important;
+        }
+
+        .icon {
+          background-image: linear-gradient(to right bottom, #ad46ff 0%, #9810fa 100%);
+        }
+
+        a {
+          color: #8200db;
+        }
+      }
+
+      .location>div {
+
+        &:hover {
+          border-color: #f4a8ff !important;
+        }
+
+        .icon {
+          background-image: linear-gradient(to right bottom, #e12afb 0%, #fe9a00 100%);
+        }
+
+        a {
+          color: #e60076;
+        }
+      }
+
+      .chat>div {
+
+        &:hover {
+          border-color: #a3b3ff !important;
+        }
+
+        .icon {
+          background-image: linear-gradient(to right bottom, #615fff 0%, #4f39f6 100%);
+        }
+
+        a {
+          color: #432dd7;
+        }
+      }
+    }
+
+
+    .contact-info {
+      background-color: #F6F7F9;
+
+      .icon {
+        width: 48px;
+        height: 48px;
+        color: #8031FE;
+      }
+
+      >div:nth-child(3) {
+        .icon {
+          color: #982EFA;
+        }
+      }
+
+      >div:nth-child(4) {
+        .icon {
+          color: #E60077;
+        }
+      }
+
+      >div:nth-child(5) {
+        .icon {
+          color: #4F39F6;
+        }
+      }
+    }
+
+    .social-media {
+      background-image: linear-gradient(to right bottom, #7f22fe, #9810fa);
+
+      .icon {
+        width: 48px;
+        height: 48px;
+        background-color: rgba(255, 255, 255, 0.2);
+        transition: .3s;
+
+        &:hover {
+          background-color: rgba(255, 255, 255, 0.3);
+        }
+      }
+    }
+
+    form {
+      label {
+        color: var(--text-label);
+      }
+
+      input:not(input[type='checkbox']),
+      textarea,
+      select {
+        background: #F9FAFB;
+        padding: 12px 16px;
+
+        &:focus {
+          border-color: #8e51ff !important;
+          outline: none;
+          box-shadow: 0 0 0 2px #fff, 0 0 0 4px #8e51ff;
+        }
+      }
+
+      textarea {
+        resize: none;
+      }
+
+      .form-check {
+        background-color: #F4F3FF;
+
+        >* {
+          cursor: pointer;
+        }
+
+        input {
+          width: 20px;
+          height: 20px;
+          accent-color: #7f22fe;
+        }
+      }
+
+      button[type='submit'] {
+        background-image: linear-gradient(to right, #7f22fe, #9810fa);
+        transition: .3s;
+
+        &:hover {
+          transform: translateY(-8px);
+        }
+      }
+
+      .announcement {
+        color: #6a7282;
+      }
+    }
+  }
+}
+
+/* ? footer */
+footer {
+  background-image: linear-gradient(to right, #4d179a, #59168b);
+
+  .copyright {
+    color: #ddd6ff;
+  }
+
+  .icon {
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+    transition: .3s;
+
+    &:hover {
+      background-color: #7f22fe;
+      scale: 1.1;
+    }
+  }
+
+  .divider {
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+
+  .container {
+    >p {
+      color: #c4b4ff;
+
+      i {
+        color: #ff6467;
+      }
+    }
   }
 }

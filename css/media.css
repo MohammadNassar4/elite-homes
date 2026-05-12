@@ -7,9 +7,9 @@
     font-size: 2.25rem;
   }
 
-    .carousel-container {
-      padding-inline: 80px;
-    }
+  .carousel-container {
+    padding-inline: 80px;
+  }
 }
 
 /*? lg */
@@ -17,6 +17,18 @@
 
   .me-lg-32 {
     margin-inline-end: 32px;
+  }
+
+  .fs-lg-14 {
+    font-size: .875rem;
+  }
+
+  .fs-lg-16 {
+    font-size: 1rem;
+  }
+
+  .fs-lg-18 {
+    font-size: 1.125rem;
   }
 
   .fs-lg-48 {
@@ -27,11 +39,7 @@
     font-size: 3.75rem;
   }
 
-
-
-
   .navbar {
-
 
     .navbar-collapse {
       border: none !important;
@@ -68,10 +76,60 @@
   .hero {
     padding-block: 80px 0;
   }
+
+  .dropdown {
+    position: static;
+  }
+
+  .navbar {
+    .dropdown-menu {
+      height: fit-content;
+      width: 1000px;
+      top: 70px;
+      left: 50% !important;
+      transform: translateX(-50%);
+      box-shadow: 0 20px 20px rgba(0, 0, 0, 0.255);
+
+      .feat,
+      .types,
+      .locations,
+      .resources {
+        background-color: inherit !important;
+      }
+
+      .feat {
+
+        .img-wrapper {
+          width: 64px;
+          height: 64px;
+        }
+      }
+
+      .locations .row a .new-york,
+      .locations .row a .los-angeles,
+      .locations .row a .miami {
+        height: 72px;
+      }
+    }
+  }
 }
 
 /*? xl */
-@media (min-width: 1200px) {}
+@media (min-width: 1200px) {
+
+  .navbar {
+
+    .dropdown-menu {
+      width: 1200px;
+      height: fit-content !important;
+      position: absolute;
+      left: 50% !important;
+      top: 70px !important;
+      transform: translateX(-50%);
+    }
+  }
+
+}
 
 /*? xxl */
 @media (min-width: 1400px) {
